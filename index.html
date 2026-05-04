@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Insanity Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="ui-layer">
+            <div id="score-display">TIME: <span id="time-value">0</span></div>
+            
+            <div id="start-screen" class="overlay">
+                <h1>VIRTUAL INSANITY</h1>
+                <p>Use WASD or Arrow Keys to move.</p>
+                <p>Avoid the moving furniture!</p>
+                <button id="start-btn">START SURVIVAL</button>
+            </div>
+            
+            <div id="game-over-screen" class="overlay hidden">
+                <h2>CRUSHED!</h2>
+                <p>You survived for <span id="final-time"></span> seconds.</p>
+                <button id="restart-btn">TRY AGAIN</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
